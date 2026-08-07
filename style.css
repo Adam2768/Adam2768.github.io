@@ -262,6 +262,25 @@ img {
   display: none;
 }
 
+.hero__identity {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.hero__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 8px 24px var(--glass-shadow),
+    0 0 0 1px rgba(120, 120, 128, 0.1);
+  flex-shrink: 0;
+}
+
 .hero__title {
   font-family: var(--font-display);
   font-weight: 800;
@@ -665,6 +684,36 @@ img {
 }
 
 /* =========================================================
+   RESULT CARD
+   ========================================================= */
+.result-card {
+  margin-top: 1.25rem;
+  padding: 1.75rem;
+}
+.result-card h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+.result-card__item + .result-card__item {
+  margin-top: 1.5rem;
+}
+.result-card__label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+.result-card__image {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(120, 120, 128, 0.15);
+}
+
+/* =========================================================
    CONTACT
    ========================================================= */
 .section--contact .section__body {
@@ -789,6 +838,11 @@ img {
     display: flex;
   }
 
+  .hero__avatar {
+    width: 88px;
+    height: 88px;
+  }
+
   .titleblock__row {
     grid-template-columns: 110px 1fr;
   }
@@ -802,7 +856,8 @@ img {
   .skills__group,
   .project,
   .contact,
-  .timeline__item {
+  .timeline__item,
+  .result-card {
     padding: 1.4rem;
   }
 }
